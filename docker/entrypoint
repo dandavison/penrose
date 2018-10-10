@@ -1,0 +1,4 @@
+#!/bin/sh
+
+(cd /penrose/src/front-end && mini_httpd -p 8000 &)
+exec penrose "$@"
