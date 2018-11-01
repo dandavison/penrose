@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker run \
+       --interactive \
+       --tty \
+       --name penrose \
+       --rm \
+       --volume=/tmp/:/tmp/ \
+       --volume=$HOME/:$HOME/ \
+       --workdir $PWD \
+       -p 8000:8000 -p 9160:9160 \
+       penrose $@
